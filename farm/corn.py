@@ -1,10 +1,7 @@
+from farm.crop import Crop
 
-class Corn:
-    def __init__(self):
-        self.grains = 0
-
+class Corn(Crop):
+    # Artık __init__ ve ripe metodlarına gerek yok,
+    # çünkü onları Crop sınıfından miras alıyoruz!
     def water(self):
         self.grains += 10
-
-    def ripe(self):
-        return self.grains >= 15
